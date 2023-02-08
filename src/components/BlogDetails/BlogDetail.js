@@ -1,51 +1,4 @@
-import React, { Component } from "react";
-import Head from "next/head";
-import { connect } from "react-redux";
-import store from "../../redux/store";
-import ReactGA from "react-ga";
-import articleDetails from "../../sample-data/blog-posts/single-post.json";
-import BlogDesc from "./BlogDescSection";
-import BlogMeta from "./BlogMetaSection";
-import BlogAuthor from "./BlogAuthorSection";
-import BlogRecent from "./BlogRecentSection";
-import LatestComments from "./LatestCommentsSection";
-import ReplyForm from "./ReplyFormSection";
-import Search from "../Blog/SearchSection";
-import RecentPost from "../Blog/RecentPostSection";
-import Category from "../Blog/CategorySecion";
-import Tags from "../Blog/TagsSection";
-import SidebarBanner from "../Blog/SidebarBannerSection";
-import Breadcrumb from "../Common/Breadcrumb";
-import Header from "../Layout/Header/Header";
-
-class BlogDetailsMain extends Component {
-  static async getInitialProps({ query }) {
-    const { slug } = query;
-    return { slug };
-  }
-
-  constructor(props) {
-    super(props);
-  }
-
-  getDetails() {
-    store.dispatch({
-      type: "NEWS_DETAILS_SUCCESS",
-      newsDetails: articleDetails,
-    });
-  }
-
-  componentDidMount() {
-    this.getDetails();
-    ReactGA.initialize("UA-168056874-1", { alwaysSendToDefaultTracker: true });
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }
-
-  render() {
-    const { slug, newsDetails } = this.props;
-
-    return (
-      <>
+<>
         <Header />
         <main>
           {/* breadcrumb-area-start */}
@@ -78,6 +31,7 @@ class BlogDetailsMain extends Component {
                         <BlogAuthor />
                         <BlogRecent />
                         <LatestComments />
+                        <ReplyForm />
                       </div>
                     ))}
                 </div>
@@ -96,13 +50,3 @@ class BlogDetailsMain extends Component {
           {/* blog-area end */}
         </main>
       </>
-    );
-  }
-}
-
-const mapStateToProps = (state) => {
-  const { newsDetails } = state.newsDetails;
-  return { newsDetails };
-};
-
-export default connect(mapStateToProps)(BlogDetailsMain);

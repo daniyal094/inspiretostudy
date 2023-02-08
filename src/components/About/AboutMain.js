@@ -28,11 +28,11 @@ class AboutMain extends Component {
 				{/* about-end */}
 
 				{/* brand-start */}
-				<BrandWithNoSSR />
+				{/* <BrandWithNoSSR /> */}
 				{/* brand-end */}
 
                 {/* testimonial-start */}
-				<TestimonialThree />
+				{/* <TestimonialThree /> */}
 				{/* testimonial-end */}
 
                 {/* whychoose-start */}
@@ -44,7 +44,7 @@ class AboutMain extends Component {
 				{/* counter-end */}
 
                 {/* banner-start */}
-				<Banner />
+				{/* <Banner /> */}
 				{/* banner-end */}
 
         	</main>

@@ -13,9 +13,9 @@ class CourseGridMain extends Component {
 	            {/* breadcrumb-start */}
 				<Breadcrumb />
 				{/* breadcrumb-end */}
-
+				
                 {/* course tab-start */}
-				<CourseGridTab pkgName='Group Package' pkgCategory='Silver' img='/assets/img/course/groupImg.jpg' pkgPrice='Rs. 3,000/-' pkgRating='4.7 (48)' />
+				{/* <CourseGridTab pkgName='Group Package' pkgCategory='Silver' img='/assets/img/course/groupImg.jpg' pkgPrice='Rs. 3,000/-' pkgRating='4.7 (48)' /> */}
 				{/* course tab-end */}
 
                 {/* cta-start */}

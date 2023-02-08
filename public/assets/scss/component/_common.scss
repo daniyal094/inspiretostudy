@@ -420,6 +420,30 @@ p {
 
 
 // theme btn
+.e-btn-outline{
+	display: inline-block;
+	height: 50px;
+	line-height: 52px;
+	text-align: center;
+	padding: 0 25px;
+	color: $black;
+	background: $white;
+	border: 2px solid $e-blue;
+	border-radius:  4px;
+	font-weight: 500;
+}
+
+.e-btn-std{
+	display: inline-block;
+	height: 50px;
+	line-height: 52px;
+	text-align: center;
+	padding: 0 25px;
+	color: $white;
+	background: $e-blue;
+	font-weight: 500;
+
+}
 
 .e-btn {
 	display: inline-block;

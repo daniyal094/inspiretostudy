@@ -3,6 +3,7 @@ import HeaderThree from '../components/Layout/Header/HeaderStyleThree';
 import FooterThree from '../components/Layout/Footer/FooterStyleThree';
 import BlogMain from '../components/Blog/BlogMain';
 import Header from '../components/Layout/Header/Header';
+import Footer from '../components/Layout/Footer/Footer';
 
 class Blog extends React.Component {
 
@@ -17,7 +18,7 @@ class Blog extends React.Component {
             <React.Fragment>
             <Header />
             <BlogMain />
-            <FooterThree />
+            <Footer />
             </React.Fragment>
         );
     }

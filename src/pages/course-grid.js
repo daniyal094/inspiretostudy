@@ -3,6 +3,7 @@ import Footer from '../components/Layout/Footer/Footer';
 import CourseGridMain from '../components/CourseGrid/CourseGridMain';
 import HeaderThree from '../components/Layout/Header/HeaderStyleThree';
 import Header from '../components/Layout/Header/Header';
+import Packages from '../components/Packages/Packages';
 
 class CourseGrid extends React.Component {
 
@@ -17,6 +18,7 @@ class CourseGrid extends React.Component {
             <React.Fragment>
             <Header />
             <CourseGridMain />
+            <Packages/>
             <Footer />
             </React.Fragment>
         );

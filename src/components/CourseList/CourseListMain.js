@@ -13,7 +13,7 @@ class CourseListMain extends Component {
 	            {/* breadcrumb-start */}
 				<Breadcrumb />
 				{/* breadcrumb-end */}
-
+				
                 {/* course tab-start */}
 				<CourseListTab />
 				{/* course tab-end */}

@@ -8,7 +8,7 @@ const ArticleLayout = ({ post }) => {
             <div className="blog__item white-bg mb-30 transition-3 fix">
                 <div className="blog__thumb w-img fix">
                     <Link href={post.url}>
-                        <img src={'/'+ post.image} alt="blog image" />
+                        <img src={ post.image} alt="blog image" />
                     </Link>
                 </div>
                 <div className="blog__content">

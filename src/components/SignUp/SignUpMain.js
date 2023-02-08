@@ -30,10 +30,6 @@ class SignUpMain extends Component {
                             <div className="col-xxl-6 offset-xxl-3 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
                                 <div className="sign__wrapper white-bg">
                                     <div className="sign__header mb-35">
-                                    <div className="sign__in text-center">
-                                        <a href="#" className="sign__social g-plus text-start mb-15"><i className="fab fa-google"></i>Sign Up with Google</a>
-                                        <p> <span>........</span> Or, <Link href="/sign-up"><a>sign up</a></Link> with your email<span> ........</span> </p>
-                                    </div>
                                     </div>
                                     <div className="sign__form">
                                     <form action="#">
@@ -45,7 +41,7 @@ class SignUpMain extends Component {
                                             </div>
                                         </div>
                                         <div className="sign__input-wrapper mb-25">
-                                            <h5>Work email</h5>
+                                            <h5>Email</h5>
                                             <div className="sign__input">
                                                 <input type="text" placeholder="e-mail address"/>
                                                 <i className="fas fa-envelope"></i>

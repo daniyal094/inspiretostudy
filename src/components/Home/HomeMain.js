@@ -18,7 +18,7 @@ class HomeMain extends Component {
 				{/* hero-end */}
 
 				{/* category-start */}
-				<Category />
+				{/* <Category /> */}
 				{/* category-end */}
 
 				{/* banner-start */}

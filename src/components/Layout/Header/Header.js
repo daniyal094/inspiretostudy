@@ -34,15 +34,6 @@ const Header = () => {
 
   return (
     <React.Fragment>
-      <Head>
-        <title>
-          Educal – Online Course and Education React, Nextjs Template
-        </title>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
       <header>
         <div
           id="header-sticky"
@@ -50,20 +41,20 @@ const Header = () => {
         >
           <div className="container-fluid">
             <div className="row align-items-center">
-              <div className="col-xxl-2 col-xl-3 col-lg-4 col-md-2 col-sm-4 col-6">
+              <div className="col-xxl-1 col-xl-3 col-lg-4 col-md-2 col-sm-4 col-6">
                 <div className="logo">
                   <Link href="/">
                     <a>
                       <img
                         src="assets/img/logo/logo.png"
                         alt="logo"
-                        style={{ width: "110px" }}
+                        style={{ width: "125px" }}
                       />
                     </a>
                   </Link>
                 </div>
               </div>
-              <div className="col-xxl-10 col-xl-9 col-lg-8 col-md-10 col-sm-8 col-6">
+              <div className="col-xxl-11 col-xl-9 col-lg-8 col-md-10 col-sm-8 col-6">
                 <div className="header__right d-flex justify-content-end align-items-center">
                   <div className="main-menu d-none d-xl-block">
                     <nav id="mobile-menu">
@@ -80,7 +71,7 @@ const Header = () => {
                         </li>
                         <li>
                           <Link href="/course-grid">
-                            <a>Courses</a>
+                            <a>Programs</a>
                           </Link>
                           {/* <ul className="submenu">
                                           <li><Link href="/course-grid"><a>Courses</a></Link></li>
@@ -95,7 +86,7 @@ const Header = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link href="/blog">
+                          <Link href="/reviews">
                             <a>Reviews</a>
                           </Link>
                         </li>
@@ -186,8 +177,13 @@ const Header = () => {
                     </span>
                   </div>
                   <div className="header__btn ml-20 d-none d-sm-block">
-                    <Link href="/contact">
-                      <a className="e-btn">Try for free</a>
+                    <Link href="/sign-in">
+                      <a className="e-btn">Login</a>
+                    </Link>
+                  </div>
+                  <div className="header__btn ml-5 d-none d-sm-block">
+                    <Link href="/sign-up">
+                      <a className="e-btn">Register</a>
                     </Link>
                   </div>
                   <div className="sidebar__menu d-xl-none">

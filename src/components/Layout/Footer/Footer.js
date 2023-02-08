@@ -12,11 +12,6 @@ const Footer = () => {
                      <div className="row">
                         <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
                            <div className="footer__widget mb-50">
-                              <div className="footer__widget-head mb-22">
-                                 <div className="footer__logo">
-                                    <Link href="/"><a><img src="assets/img/logo/logo-2.png" alt="img not found"/></a></Link>
-                                 </div>
-                              </div>
                               <div className="footer__widget-body">
                                  <p>Great lesson ideas and lesson plans for ESL teachers! Educators can customize lesson plans to best.</p>
 
@@ -63,7 +58,7 @@ const Footer = () => {
                                        <li><Link href="/instructor"><a>Partners</a></Link></li>
                                        <li><Link href="/blog"><a>News & Blogs</a></Link></li>
                                        <li><Link href="/about"><a>FAQs</a></Link></li>
-                                       <li><Link href="/course-grid"><a>Tutorials</a></Link></li>
+                                       <li><Link href="/student_pannel"><a>Student Pannel</a></Link></li>
                                     </ul>
                                  </div>
                               </div>

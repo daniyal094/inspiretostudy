@@ -2,6 +2,8 @@ import React from 'react';
 import HeaderThree from '../components/Layout/Header/HeaderStyleThree';
 import FooterThree from '../components/Layout/Footer/FooterStyleThree';
 import CheckoutMain from '../components/Checkout/CheckoutMain';
+import Footer from '../components/Layout/Footer/Footer';
+import Header from '../components/Layout/Header/Header';
 
 class Checkout extends React.Component {
 
@@ -14,9 +16,9 @@ class Checkout extends React.Component {
     render() {
         return (
             <React.Fragment>
-            <HeaderThree />
+            <Header />
             <CheckoutMain />
-            <FooterThree />
+            <Footer />
             </React.Fragment>
         );
     }
