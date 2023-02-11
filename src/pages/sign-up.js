@@ -18,6 +18,7 @@ class SignIn extends React.Component {
         return (
             <React.Fragment>
                 <Header />
+                
                 <SignUpMain />
                 <Footer />
             </React.Fragment>
