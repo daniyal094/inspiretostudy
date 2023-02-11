@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import Breadcrumb from "../Common/Breadcrumb";
 import StudentPannelApt from "../StudenPannelApt/StudentPannelApt";
 import StudentPannelOrder from "../StudenPannelOrder/StudentPannelOrder";
@@ -9,6 +9,12 @@ export default function StudentPannel() {
   const changeHandler = (value) => {
     setState(value);
   };
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user.role !== "user") {
+      window.location = "/";
+    }
+  }, []);
   return (
     <>
       <main>

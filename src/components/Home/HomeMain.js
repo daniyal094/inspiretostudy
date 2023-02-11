@@ -7,6 +7,7 @@ import Cta from './CtaSection';
 import PriceTab from '../Elements/Tab/PriceTab';
 import CourseTab from '../Elements/Tab/CourseTab';
 import HeroSlider from '../Layout/Header/HeroSlider';
+import About from '../HomeTwo/AboutSection';
 
 class HomeMain extends Component {
 
@@ -26,7 +27,9 @@ class HomeMain extends Component {
 				{/* banner-start */}
 				{/* <Banner /> */}
 				{/* banner-end */}
-
+				<div className='mt-30'>
+                    <About />
+                </div>
 				{/* course-start */}
 				{/* <CourseTab /> */}
 				{/* course-end */}
@@ -36,7 +39,7 @@ class HomeMain extends Component {
 				{/* event-end */}
 
 				{/* tab-start */}
-				<PriceTab />
+				{/* <PriceTab /> */}
 				{/* tab-end */}
 
 				{/* cta-start */}

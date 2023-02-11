@@ -18,7 +18,7 @@ class CourseGrid extends React.Component {
         return (
             <React.Fragment>
             <Header />
-			<Breadcrumb/>
+			{/* <Breadcrumb/> */}
             <Packages/>
             <Footer />
             </React.Fragment>

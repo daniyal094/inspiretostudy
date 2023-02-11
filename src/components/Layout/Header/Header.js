@@ -8,9 +8,16 @@ import ShopingCart from "./ShopingCart";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [shopOpen, setShopOpen] = useState(false);
+  const [user, setuser] = useState(false);
 
   const router = useRouter();
   const [path, setPath] = useState("");
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    setuser(user);
+  }, []);
+
   useEffect(() => {
     setPath(router.pathname);
   }, [router]);
@@ -30,7 +37,7 @@ const Header = () => {
       ? header.classList.add("sticky")
       : header.classList.remove("sticky");
   };
-  const [cartItem, setCartItem] = useState('')
+  const [cartItem, setCartItem] = useState("");
   // Sticky Menu Area End
 
   return (
@@ -49,7 +56,7 @@ const Header = () => {
                       <img
                         src="assets/img/logo/logo.png"
                         alt="logo"
-                        style={{ width: "115px", }}
+                        style={{ width: "115px" }}
                       />
                     </a>
                   </Link>
@@ -58,8 +65,8 @@ const Header = () => {
               <div className="col-xxl-11 col-xl-10 col-lg-8 col-md-10 col-sm-8 col-6">
                 <div className="header__right d-flex justify-content-end align-items-center">
                   <div className="main-menu d-none d-xl-block">
-                    <nav id="mobile-menu">
-                      <ul>
+                    <nav id="mobile-menu ">
+                      <ul className="me-5">
                         <li>
                           <Link href="/">
                             <a>Home</a>
@@ -103,7 +110,7 @@ const Header = () => {
                       </ul>
                     </nav>
                   </div>
-                  <div className="header__search p-relative ml-5 d-none d-md-block">
+                  {/* <div className="header__search p-relative ml-5 d-none d-md-block">
                     <form action="#">
                       <input type="text" placeholder="Search..." />
                       <button type="submit">
@@ -127,10 +134,12 @@ const Header = () => {
                             />
                           </svg>
                         </div>
-                        <span className={cartItem ? 'cart-item' : ''}>{cartItem}</span>
+                        <span className={cartItem ? "cart-item" : ""}>
+                          {cartItem}
+                        </span>
                       </span>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="header__cart header__cart--responsive">
                     <span
                       className="cart-toggle-btn"
@@ -151,16 +160,43 @@ const Header = () => {
                       <span className="cart-item">2</span>
                     </span>
                   </div>
-                  <div className="header__btn ml-20 d-none d-sm-block">
-                    <Link href="/sign-in">
-                      <a className="e-btn">Login</a>
-                    </Link>
-                  </div>
-                  <div className="header__btn ml-5 d-none d-sm-block">
-                    <Link href="/sign-up">
-                      <a className="e-btn">Register</a>
-                    </Link>
-                  </div>
+                  {user?.username ? (
+                    <>
+                      <div className="header__btn ml-20 d-none d-sm-block">
+                        <Link
+                          href={
+                            user?.role === "user"
+                              ? "/student_pannel"
+                              : "/Coach_Pannel"
+                          }
+                        >
+                          <a className="e-btn">Hi! {user?.username}</a>
+                        </Link>
+                      </div>
+                      <div className="header__btn ml-20 d-none d-sm-block">
+                        <button className="e-btn" onClick={() => {
+                           localStorage.setItem(
+                            "user",
+                            JSON.stringify(null)
+                          );
+                          window.location = "/"
+                        }}>Logout</button>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="header__btn ml-20 d-none d-sm-block">
+                        <Link href="/sign-in">
+                          <a className="e-btn">Login</a>
+                        </Link>
+                      </div>
+                      <div className="header__btn ml-5 d-none d-sm-block">
+                        <Link href="/sign-up">
+                          <a className="e-btn">Register</a>
+                        </Link>
+                      </div>
+                    </>
+                  )}
                   <div className="sidebar__menu d-xl-none">
                     <div
                       className="sidebar-toggle-btn ml-30"

@@ -9,9 +9,9 @@ class ContactMain extends Component {
 	render() {
 
 		return (
-			<main>
+			<main className='pt-100'>
 				{/* breadcrumb-start */}
-				<Breadcrumb img={'assets/img/contact.jpg'} stylesImg={{ width: '500px', }} styles={{ display: 'flex', justifyContent: 'center' }} />
+				{/* <Breadcrumb img={'assets/img/contact.jpg'} stylesImg={{ width: '500px', }} styles={{ display: 'flex', justifyContent: 'center' }} /> */}
 				{/* breadcrumb-end */}
 
 				{/* Getintouch-start */}

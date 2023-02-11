@@ -59,8 +59,9 @@ export default function StudentPannelOrder(props) {
       <div className="p-3 py-1 w-100  mb-5 containerWithShadow">
         <ToolkitProvider keyField="id" data={order} columns={columns} search>
           {(props) => (
-            <div>
-              <SearchBar {...props.searchProps} />
+            <div className="container">
+              <SearchBar {...props.searchProps} className="mb-4"/>
+              
               <BootstrapTable keyField="id" data={order} columns={columns} />
               <ModalMain show={modalShow} onHide={() => setModalShow(false)} />
             </div>
