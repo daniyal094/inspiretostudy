@@ -17,7 +17,9 @@ class HomeMain extends Component {
 			<main>
 				<HeroSlider />
 				{/* hero-start */}
-				<Hero />
+				<div className='pt-100 pb-100 grey-bg-2'>
+					<Hero />
+				</div>
 				{/* hero-end */}
 
 				{/* category-start */}
@@ -28,8 +30,8 @@ class HomeMain extends Component {
 				{/* <Banner /> */}
 				{/* banner-end */}
 				<div className='mt-30'>
-                    <About />
-                </div>
+					<About />
+				</div>
 				{/* course-start */}
 				{/* <CourseTab /> */}
 				{/* course-end */}

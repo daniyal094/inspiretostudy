@@ -88,7 +88,7 @@ const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
                 <ul className={courses ? "sub-menu active" : "sub-menu"}>
                   <li>
                     <Link href="/course-grid">
-                      <a>Courses </a>
+                      <a>Programs </a>
                     </Link>
                   </li>
                 </ul>
@@ -109,7 +109,7 @@ const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
                       <a>About</a>
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="/instructor">
                       <a>Instructor</a>
                     </Link>
@@ -122,9 +122,9 @@ const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
                   <li>
                     <Link href="/event-details">
                       <a>Event Details</a>
-                    </Link>
-                  </li>
-                  <li>
+                    </Link> */}
+                  {/* </li> */}
+                  {/* <li>
                     <Link href="/cart">
                       <a>My Cart</a>
                     </Link>
@@ -138,7 +138,7 @@ const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
                     <Link href="/checkout">
                       <a>Checkout</a>
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link href="/sign-in">
                       <a>Sign In</a>
@@ -149,11 +149,11 @@ const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
                       <a>Sign Up</a>
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="/error">
                       <a>Error</a>
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </li>
               <li>
@@ -164,14 +164,14 @@ const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
             </ul>
           </div>
 
-          <div className="sidebar__search p-relative mt-40 ">
+          {/* <div className="sidebar__search p-relative mt-40 ">
             <form action="#">
               <input type="text" placeholder="Search..." />
               <button type="submit">
                 <i className="fas fa-search"></i>
               </button>
             </form>
-          </div>
+          </div> */}
           {/* <div className="sidebar__cart mt-30">
                 <a href="#">
                     <div className="header__cart-icon">
@@ -185,8 +185,8 @@ const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
                 </a>
               </div> */}
         </div>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 };
 

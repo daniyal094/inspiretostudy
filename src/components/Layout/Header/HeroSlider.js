@@ -4,20 +4,9 @@ import React from 'react'
 export default function HeroSlider() {
     return (
         <>
-            <main>
-                <section className='mt-200'>
-                    <div>
-                        <div>
-                            <div>
-                                <h3 className="p-absolute mt-200 ml-200" style={{ color: 'white', fontSize: '65px', wordSpacing: '2px' }}>
-                                    Inspire To Study
-                                </h3>
-                            </div>
-                            <div></div>
-                            <img src="assets/img/hero/couple.jpg" alt="SRC" className='img-fluid' />
-                        </div>
-                    </div>
-
+            <main className='mt-115'>
+                <section className='img-fluid'>
+                    <img src="assets/img/Hero.png" alt="SRC" className='img-fluid' />
                 </section>
             </main>
         </>

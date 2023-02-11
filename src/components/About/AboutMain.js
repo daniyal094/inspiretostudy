@@ -6,50 +6,52 @@ import WhyChoose from '../HomeTwo/WhyChooseSection';
 import Counter from '../Elements/Counter/CounterStyleTwo';
 import Banner from '../Home/BannerSection';
 import dynamic from 'next/dynamic';
+import Heading from '../Heading/Heading';
 const BrandWithNoSSR = dynamic(() => import('../Elements/Brand/BrandSection'), {
-  ssr: false
+	ssr: false
 })
 
 
 class AboutMain extends Component {
 
-    render() {
+	render() {
 
-        return (
-            <main>
-	            {/* breadcrumb-start */}
-				<Breadcrumb pageTitle=" " img={'assets/img/29493.jpg'} />
+		return (
+			<main className='mt-5 pt-100'>
+				{/* breadcrumb-start */}
+				<Heading heading={"About us"} subHeading={"Stay Up To Date"} />
+
 				{/* breadcrumb-end */}
 
-                {/* about-start */}
-                <div className='mt-30'>
-                    <About />
-                </div>
+				{/* about-start */}
+				<div className='mt-30'>
+					<About />
+				</div>
 				{/* about-end */}
 
 				{/* brand-start */}
 				{/* <BrandWithNoSSR /> */}
 				{/* brand-end */}
 
-                {/* testimonial-start */}
+				{/* testimonial-start */}
 				{/* <TestimonialThree /> */}
 				{/* testimonial-end */}
 
-                {/* whychoose-start */}
+				{/* whychoose-start */}
 				<WhyChoose />
 				{/* whychoose-end */}
 
-                {/* counter-start */}
+				{/* counter-start */}
 				<Counter />
 				{/* counter-end */}
 
-                {/* banner-start */}
+				{/* banner-start */}
 				{/* <Banner /> */}
 				{/* banner-end */}
 
-        	</main>
-        );
-    }
+			</main>
+		);
+	}
 }
 
 export default AboutMain;

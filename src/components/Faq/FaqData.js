@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Breadcrumb from "../Common/Breadcrumb";
+import Heading from "../Heading/Heading";
 
 export default function FaqData() {
   const [faqs, setFaqs] = useState([
@@ -75,8 +76,9 @@ export default function FaqData() {
 
   return (
     <>
-      <main>
-        <Breadcrumb pageTitle=" " img={'assets/img/faq.jpg'}/>
+      <main className='mt-5 pt-100'>
+        <Heading heading={"FAQ"} subHeading={"Answer to your Questions"} />
+
         <section className="blog__area pt-120 pb-120">
           <h2 className="text-center mb-30">How can we help you?</h2>
           <div
