@@ -1,12 +1,25 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 import Swal from "sweetalert2";
 import Heading from "../Heading/Heading";
+import ModalCheckOut from "../Modal/ModalCheckOut";
 
 const Plan = (props) => {
+  const [show, setshow] = useState(false)
+  const user = JSON.parse(localStorage.getItem("user"));
   const clickHandler = () => {
-    Swal.fire("Good job!", "Your Package add to cart", "success");
+    if (user?.role === "user") {
+      setshow(true)
+    }
+    else{
+      toast.info("Please login as a student to purchase package")
+    }
+    // Swal.fire("Good job!", "Your Package add to cart", "success");
   };
+  const onApprovalData = () => {
+    Swal.fire("Good job!", "Your Package add to cart", "success");
+  }
   return (
     <div className="card mb-4 shadow-sm">
       <div className="card-header py-3">
@@ -47,6 +60,7 @@ const Plan = (props) => {
           {props.buttonLabel}
         </button>
       </div>
+           <ModalCheckOut show={show} onApproval={onApprovalData} onHide={() => setshow(false)} />
     </div>
   );
 };

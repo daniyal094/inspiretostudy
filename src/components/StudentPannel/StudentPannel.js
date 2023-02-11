@@ -18,7 +18,7 @@ export default function StudentPannel() {
   return (
     <>
       <main>
-        <Breadcrumb pageTitle="Student Pannel" />
+      <Breadcrumb pageTitle="Student Pannel" isImage={false}  />
         <section className="blog__area pt-120 pb-120">
           <div className="d-flex justify-content-center">
             <button

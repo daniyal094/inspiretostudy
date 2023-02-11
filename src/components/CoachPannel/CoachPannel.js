@@ -18,7 +18,7 @@ export default function CoachPannel() {
   return (
     <>
       <main>
-        <Breadcrumb pageTitle="Coach Pannel" isImage={false} color={"pink"} />
+        <Breadcrumb pageTitle="Coach Pannel" isImage={false}  />
         <section className="blog__area pt-120 pb-120">
           <div className="d-flex justify-content-center">
             <button
