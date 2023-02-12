@@ -140,7 +140,7 @@ const Header = () => {
                       </span>
                     </div>
                   </div> */}
-                  <div className="header__cart header__cart--responsive">
+                  {/* <div className="header__cart header__cart--responsive">
                     <span
                       className="cart-toggle-btn"
                       onClick={() => {
@@ -159,7 +159,7 @@ const Header = () => {
                       </div>
                       <span className="cart-item">2</span>
                     </span>
-                  </div>
+                  </div> */}
                   {user?.username ? (
                     <>
                       <div className="header__btn ml-20 d-none d-sm-block">
@@ -175,7 +175,7 @@ const Header = () => {
                       </div>
                       <div className="header__btn ml-20 d-none d-sm-block">
                         <button className="e-btn" onClick={() => {
-                           localStorage.setItem(
+                          localStorage.setItem(
                             "user",
                             JSON.stringify(null)
                           );
@@ -222,11 +222,11 @@ const Header = () => {
           className={menuOpen ? "body-overlay show" : "body-overlay"}
         ></div>
 
-        <ShopingCart shopOpen={shopOpen} setShopOpen={setShopOpen} />
+        {/* <ShopingCart shopOpen={shopOpen} setShopOpen={setShopOpen} />
         <div
           onClick={() => setShopOpen(false)}
           className={shopOpen ? "body-overlay show" : "body-overlay"}
-        ></div>
+        ></div> */}
       </header>
     </React.Fragment>
   );

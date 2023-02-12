@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Breadcrumb from '../Common/Breadcrumb';
+import Heading from '../Heading/Heading';
 import GetInTouch from './GetInTouchSection';
 import Knowledge from './KnowledgeSection';
 
@@ -11,7 +12,8 @@ class ContactMain extends Component {
 		return (
 			<main className='pt-100'>
 				{/* breadcrumb-start */}
-				{/* <Breadcrumb img={'assets/img/contact.jpg'} stylesImg={{ width: '500px', }} styles={{ display: 'flex', justifyContent: 'center' }} /> */}
+				<Heading heading={"Contact us"} subHeading={"Have a question or just want to say hi? We'd love to hear from you."} />
+
 				{/* breadcrumb-end */}
 
 				{/* Getintouch-start */}

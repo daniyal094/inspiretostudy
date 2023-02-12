@@ -5,7 +5,7 @@ class Hero extends Component {
   render() {
     return (
       <main>
-        <section className="hero__area hero__height d-flex align-items-center grey-bg-2 p-relative">
+        <section className="hero__area  d-flex align-items-center grey-bg-2 p-relative">
           <div className="hero__shape">
             <img
               className="hero-1-circle"

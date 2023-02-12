@@ -74,9 +74,9 @@ export default function Packages() {
       .then((data) => {
         setLoading(false);
         setData(data?.response_data?.packages);
-      });
+      })
+      .catch(err => toast.error(err.meassge))
   }, []);
-  console.log(data);
 
   return (
     <div className="comparison ">
