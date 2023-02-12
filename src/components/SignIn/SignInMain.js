@@ -40,6 +40,10 @@ function SignInMain() {
               "user",
               JSON.stringify({ ...data.response_data.user })
             );
+            localStorage.setItem(
+              "token",
+              JSON.stringify( data.response_data.token )
+            );
             if (data.response_data.user.role === "user") {
               router.push("/student_pannel");
             } else if (data.response_data.user.role === "consultant") {

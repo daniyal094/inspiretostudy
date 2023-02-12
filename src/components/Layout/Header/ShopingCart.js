@@ -29,32 +29,15 @@ const ShopingCart = ({ setShopOpen, shopOpen }) => {
       setCounter(count => count - 1);
    };
 
-   //increase counter
-   const increasee = () => {
-      setCounterr(count => count + 1);
-   };
-
-   //decrease counter
-   const decreasee = () => {
-      setCounterr(count => count - 1);
-   };
-
-   //increase counter
-   const increaseee = () => {
-      setCounterrr(count => count + 1);
-   };
-
-   //decrease counter
-   const decreaseee = () => {
-      setCounterrr(count => count - 1);
-   };
+ 
    const onApprovalData = () => {
+      setModalShow(false)
       Swal.fire(
          'Good job!',
          'Your Request has been submited for Approval',
          'success'
-      ),
-         setModalShow(false)
+      )
+    
    }
    return (
       <div className={shopOpen ? "sidebar__areas open" : "sidebar__areas"}>

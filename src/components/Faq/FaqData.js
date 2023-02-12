@@ -15,8 +15,7 @@ export default function FaqData() {
       answer:
         "Some benefits of using React include improved performance, reusable components, and easy maintenance.",
       open: false,
-    }
-    ,
+    },
     {
       question: "What is the difference between React and React Native?",
       answer:
@@ -76,27 +75,41 @@ export default function FaqData() {
 
   return (
     <>
-      <main className='mt-5 pt-100'>
+      <main className="mt-5 pt-100">
         <Heading heading={"FAQ"} subHeading={"Answer to your Questions"} />
 
         <section className="blog__area pt-120 pb-120">
           <h2 className="text-center mb-30">How can we help you?</h2>
           <div
-            className="container faq-container"
+            className="container faq-container "
             style={{ width: "800px", margin: "0 auto", padding: "30px" }}
           >
             {faqs.map((faq, index) => (
-              <div key={index}>
-                <h3
+              <div key={index} className="bg-light my-4 p-3">
+                <h4
                   style={{
                     cursor: "pointer",
                     fontSize: "22px",
                     marginBottom: "30px",
+                    fontWeight: "normal",
+                    background: "#e9e9e9",
+                    display: "flex",
+                    justifyContent: "space-between",
                   }}
+                  className="p-3"
                   onClick={() => toggleFAQ(index)}
                 >
-                  {faq.question}
-                </h3>
+                  <span>Q: {faq.question}</span>
+                  <span
+                    style={{
+                      transform: faq.open ? "rotate(270deg)" : "rotate(90deg)",
+                      fontSize: "18px",
+                    }}
+                  >
+                    {" "}
+                    >{" "}
+                  </span>
+                </h4>
                 {faq.open && (
                   <p
                     style={{
@@ -104,9 +117,10 @@ export default function FaqData() {
                       padding: "20px",
                       backgroundColor: "#f2f2f2",
                       fontSize: "16px",
+                      color: "black",
                     }}
                   >
-                    {faq.answer}
+                    Ans: {faq.answer}
                   </p>
                 )}
               </div>

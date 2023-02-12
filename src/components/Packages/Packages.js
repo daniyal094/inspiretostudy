@@ -5,20 +5,63 @@ import Heading from "../Heading/Heading";
 import ModalCheckOut from "../Modal/ModalCheckOut";
 
 const Plan = (props) => {
-  const [show, setshow] = useState(false)
+  const [show, setshow] = useState(false);
+  const [selectedPackage, setselectedPackage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [code, setcode] = useState("");
   const user = JSON.parse(localStorage.getItem("user"));
+  const token = JSON.parse(localStorage.getItem("token"));
   const clickHandler = () => {
     if (user?.role === "user") {
-      setshow(true)
-    }
-    else{
-      toast.info("Please login as a student to purchase package")
+      setselectedPackage(props.id);
+      setshow(true);
+    } else {
+      toast.info("Please login as a student to purchase package");
     }
     // Swal.fire("Good job!", "Your Package add to cart", "success");
   };
   const onApprovalData = () => {
-    Swal.fire("Good job!", "Your Package add to cart", "success");
-  }
+    setLoading(true);
+    const apiData = {
+      user_id: user?._id,
+      package_id: selectedPackage?._id,
+      package_name : selectedPackage.name,
+      paymentCode: code,
+      username : user?.username
+    };
+    console.log(code );
+    if (code) {
+      fetch("https://inspiretostudy.up.railway.app/api/v1/mypackage", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          ...apiData,
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("data".data);
+          setLoading(false);
+          if (data.response_code === 200 || data.response_code === 201) {
+            Swal.fire("Good job!", "Your Package add to cart", "success");
+            toast.success("Package Purchased.");
+          } else {
+            toast.error(data.response_message);
+          }
+        })
+        .catch((err) => {
+          setLoading(false);
+          toast.error(err.message);
+        });
+      setshow(false);
+    } else {
+      setLoading(false);
+      toast.error("Please enter a valid code ");
+    }
+  };
   return (
     <div className="card mb-4 shadow-sm">
       <div className="card-header py-3">
@@ -52,14 +95,20 @@ const Plan = (props) => {
           </li>
         </ul>
         <button
-          onClick={clickHandler}
+          onClick={() => clickHandler()}
           className={`e-btn`}
           type="button"
         >
           {props.buttonLabel}
         </button>
       </div>
-           <ModalCheckOut show={show} onApproval={onApprovalData} onHide={() => setshow(false)} />
+      <ModalCheckOut
+        show={show}
+        onApproval={onApprovalData}
+        onHide={() => setshow(false)}
+        setcode={setcode}
+        loading={loading}
+      />
     </div>
   );
 };
@@ -74,7 +123,7 @@ export default function Packages() {
         setLoading(false);
         setData(data?.response_data?.packages);
       })
-      .catch(err => toast.error(err.meassge))
+      .catch((err) => toast.error(err.meassge));
   }, []);
 
   return (
@@ -83,7 +132,7 @@ export default function Packages() {
         <div
           style={{
             height: "100vh",
-            display:'flex',
+            display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
@@ -112,6 +161,7 @@ export default function Packages() {
                       groupSize={item?.groupSize}
                       freeResources={item?.freeResources}
                       teacher={item?.teacher}
+                      id={item}
                     />
                   </div>
                 )}
