@@ -69,7 +69,7 @@ export default function Packages() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch("http://192.168.222.221:8000/api/v1/packages")
+    fetch("https://inspiretostudy.up.railway.app/api/v1/packages")
       .then((response) => response.json())
       .then((data) => {
         setLoading(false);

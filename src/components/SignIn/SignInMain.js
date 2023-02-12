@@ -23,7 +23,7 @@ function SignInMain() {
     console.log(apiData);
 
     if (!loading) {
-      fetch("http://192.168.222.221:8000/api/v1/user/login", {
+      fetch("https://inspiretostudy.up.railway.app/api/v1/user/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

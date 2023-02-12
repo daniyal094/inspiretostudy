@@ -29,7 +29,7 @@ export default function SignUpMain() {
     if (condition1 && condition2) {
       if (formData?.password === formData.retypepassword) {
         if (!loading) {
-          fetch("http://192.168.222.221:8000/api/v1/user/signup", {
+          fetch("https://inspiretostudy.up.railway.app/api/v1/user/signup", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
