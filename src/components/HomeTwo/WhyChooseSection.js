@@ -29,11 +29,11 @@ class WhyChoose extends Component {
                   </div>
                   <div className="col-xxl-5 col-xl-5 col-lg-6 col-md-8">
                      <div className="why__thumb">
-                        <img src="assets/img/why/why.png" alt="img not found" />
-                        <img className="why-green" src="assets/img/why/why-shape-green.png" alt="img not found" />
+                        <img src="assets/img/logo/logo.png" alt="img not found" style={{width:'560px',height: "430px",objectFit:'cover'}} />
+                        {/* <img className="why-green" src="assets/img/why/why-shape-green.png" alt="img not found" />
                         <img className="why-pink" src="assets/img/why/why-shape-pink.png" alt="img not found" />
                         <img className="why-dot" src="assets/img/why/why-shape-dot.png" alt="img not found" />
-                        <img className="why-line" src="assets/img/why/why-shape-line.png" alt="img not found" />
+                        <img className="why-line" src="assets/img/why/why-shape-line.png" alt="img not found" /> */}
                      </div>
                   </div>
                </div>

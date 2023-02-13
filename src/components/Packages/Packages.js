@@ -25,17 +25,17 @@ const Plan = (props) => {
     const apiData = {
       user_id: user?._id,
       package_id: selectedPackage?._id,
-      package_name : selectedPackage.name,
+      package_name: selectedPackage.name,
       paymentCode: code,
-      username : user?.username
+      username: user?.username,
     };
-    console.log(code );
+    console.log(code);
     if (code) {
       fetch("https://inspiretostudy.up.railway.app/api/v1/mypackage", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${token}`,
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({
           ...apiData,
@@ -43,7 +43,6 @@ const Plan = (props) => {
       })
         .then((response) => response.json())
         .then((data) => {
-          console.log("data".data);
           setLoading(false);
           if (data.response_code === 200 || data.response_code === 201) {
             Swal.fire("Good job!", "Your Package add to cart", "success");

@@ -5,56 +5,33 @@ import Heading from "../Heading/Heading";
 export default function FaqData() {
   const [faqs, setFaqs] = useState([
     {
-      question: "What is React?",
+      question: "Why Chose Inspire to study?",
       answer:
-        "React is a JavaScript library for building user interfaces developed by Facebook.",
+        "Beacuse we will help you to get the motivation you need to get success in you studies.",
       open: false,
     },
     {
-      question: "What are the benefits of using React?",
+      question: "Why Chose Inspire to study?",
       answer:
-        "Some benefits of using React include improved performance, reusable components, and easy maintenance.",
+        "Beacuse we will help you to get the motivation you need to get success in you studies.",
       open: false,
     },
     {
-      question: "What is the difference between React and React Native?",
+      question: "Why Chose Inspire to study?",
       answer:
-        "React is used for building web interfaces, while React Native is used for building mobile applications.",
+        "Beacuse we will help you to get the motivation you need to get success in you studies.",
       open: false,
     },
-    ,
     {
-      question: "What is the difference between React and React Native?",
+      question: "Why Chose Inspire to study?",
       answer:
-        "React is used for building web interfaces, while React Native is used for building mobile applications.",
+        "Beacuse we will help you to get the motivation you need to get success in you studies.",
       open: false,
     },
-    ,
     {
-      question: "What is the difference between React and React Native?",
+      question: "Why Chose Inspire to study?",
       answer:
-        "React is used for building web interfaces, while React Native is used for building mobile applications.",
-      open: false,
-    },
-    ,
-    {
-      question: "What is the difference between React and React Native?",
-      answer:
-        "React is used for building web interfaces, while React Native is used for building mobile applications.",
-      open: false,
-    },
-    ,
-    {
-      question: "What is the difference between React and React Native?",
-      answer:
-        "React is used for building web interfaces, while React Native is used for building mobile applications.",
-      open: false,
-    },
-    ,
-    {
-      question: "What is the difference between React and React Native?",
-      answer:
-        "React is used for building web interfaces, while React Native is used for building mobile applications.",
+        "Beacuse we will help you to get the motivation you need to get success in you studies.",
       open: false,
     },
   ]);

@@ -1,7 +1,7 @@
-import {  MenuItem } from "@mui/material";
+import { MenuItem } from "@mui/material";
 import Link from "next/link";
 import Select from "@mui/material/Select";
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
 
@@ -10,7 +10,7 @@ export default function SignUpMain() {
   const [condition1, setcondition1] = useState(false);
   const [condition2, setcondition2] = useState(false);
   const [loading, setLoading] = useState(false);
-  const router =  useRouter()
+  const router = useRouter();
   const handleChangeFormData = (e) => {
     updateFormData({
       ...formData,
@@ -42,8 +42,8 @@ export default function SignUpMain() {
             .then((data) => {
               console.log("data".data);
               setLoading(false);
-              if (data.response_code === 200 || data.response_code === 201)  {
-                router.push("/sign-in")
+              if (data.response_code === 200 || data.response_code === 201) {
+                router.push("/sign-in");
                 toast.success("Registered Successfully");
               } else {
                 toast.error(data.response_message);
@@ -148,6 +148,7 @@ export default function SignUpMain() {
                         autoWidth
                         value={formData.gender}
                         name="gender"
+                        defaultValue={"Blank"}
                       >
                         <MenuItem value={"Blank"}>
                           <em>None</em>
@@ -156,8 +157,7 @@ export default function SignUpMain() {
                         <MenuItem value={"female"}>Femail</MenuItem>
                       </Select>
                     </div>
-                  </div>
-                  <div className="sign__form col-xxl-6">
+                  <div >
                     <div className="sign__input-wrapper mb-25">
                       <h5>Email</h5>
                       <div className="sign__input">
@@ -206,57 +206,62 @@ export default function SignUpMain() {
                         <i className="fas fa-lock"></i>
                       </div>
                     </div>
-                    <div className="sign__input-wrapper mb-25">
-                      <h5>Phone Number</h5>
-                      <div className="sign__input">
-                        <input
-                          type="text"
-                          placeholder="Phone Number"
-                          onChange={handleChangeFormData}
-                          name="phone"
-                        />
-                        <i className="fas fa-phone"></i>
-                      </div>
-                    </div>
-                    <div className="sign__input-wrapper mb-25">
-                      <h5>Education</h5>
-                      <Select
-                        labelId="demo-simple-select-autowidth-label"
-                        id="demo-simple-select-autowidth"
-                        label="Education"
+                  </div>
+                  </div>
+                <div className="col-xxl-6">
+                  <div className="sign__input-wrapper mb-25">
+                    <h5>Phone Number</h5>
+                    <div className="sign__input">
+                      <input
+                        type="text"
+                        placeholder="Phone Number"
                         onChange={handleChangeFormData}
-                        autoWidth
-                        value={formData.education}
-                        name="education"
-                      >
-                        <MenuItem value={"Blank"}>
-                          <em>Type of Education</em>
-                        </MenuItem>
-                        <MenuItem value={"Matric"}>Matric</MenuItem>
-                        <MenuItem value={"Intermediate"}>Intermediate</MenuItem>
-                        <MenuItem value={"Bachelor"}>Bachelor</MenuItem>
-                        <MenuItem value={"Master"}>Master</MenuItem>
-                      </Select>
+                        name="phone"
+                      />
+                      <i className="fas fa-phone"></i>
                     </div>
                   </div>
+                  <div className="sign__input-wrapper mb-25">
+                    <h5>Education</h5>
+                    <Select
+                      labelId="demo-simple-select-autowidth-label"
+                      id="demo-simple-select-autowidth"
+                      label="Education"
+                      onChange={handleChangeFormData}
+                      autoWidth
+                      value={formData.education}
+                      name="education"
+                      defaultValue={"Blank"}
+                    >
+                      <MenuItem value={"Blank"}>
+                        <em>Type of Education</em>
+                      </MenuItem>
+                      <MenuItem value={"Matric"}>Matric</MenuItem>
+                      <MenuItem value={"Intermediate"}>Intermediate</MenuItem>
+                      <MenuItem value={"Bachelor"}>Bachelor</MenuItem>
+                      <MenuItem value={"Master"}>Master</MenuItem>
+                    </Select>
+                  </div>
+                  <div className="sign__input-wrapper mb-25">
+                    <h5>Consistent</h5>
+                    <Select
+                      labelId="demo-simple-select-autowidth-label"
+                      id="demo-simple-select-autowidth"
+                      label="Education"
+                      onChange={handleChangeFormData}
+                      autoWidth
+                      value={formData.consistent}
+                      name="consistent"
+                      defaultValue={"Blank"}
+                    >
+                      <MenuItem value={"Blank"}>
+                        <em>Are you consistent with your education?</em>
+                      </MenuItem>
+                      <MenuItem value={true}>Yes</MenuItem>
+                      <MenuItem value={false}>No</MenuItem>
+                    </Select>
+                  </div>
                 </div>
-                <div className="sign__input-wrapper mb-25">
-                  <h5>Consistent</h5>
-                  <Select
-                    labelId="demo-simple-select-autowidth-label"
-                    id="demo-simple-select-autowidth"
-                    label="Education"
-                    onChange={handleChangeFormData}
-                    autoWidth
-                    value={formData.consistent}
-                    name="consistent"
-                  >
-                    <MenuItem value={"Blank"}>
-                      <em>Are you consistent with your education?</em>
-                    </MenuItem>
-                    <MenuItem value={true}>Yes</MenuItem>
-                    <MenuItem value={false}>No</MenuItem>
-                  </Select>
                 </div>
                 <div>
                   <div className="d-flex mb-20">
