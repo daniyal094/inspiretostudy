@@ -8,7 +8,7 @@ import Breadcrumb from '../components/Common/Breadcrumb';
 
 class CourseGrid extends React.Component {
 
-    static getInitialProps({store}) {}
+    static getInitialProps({ store }) { }
 
     constructor(props) {
         super(props);
@@ -17,10 +17,10 @@ class CourseGrid extends React.Component {
     render() {
         return (
             <React.Fragment>
-            <Header />
-			{/* <Breadcrumb/> */}
-            <Packages/>
-            <Footer />
+                <Header />
+                {/* <Breadcrumb/> */}
+                <Packages />
+                <Footer />
             </React.Fragment>
         );
     }

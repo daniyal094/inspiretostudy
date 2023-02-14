@@ -75,19 +75,19 @@ class BlogDetailsMain extends Component {
 
                         <div className="blog__line"></div>
                         <BlogMeta />
-                        <BlogAuthor />
+                        {/* <BlogAuthor /> */}
                         <BlogRecent />
-                        <LatestComments />
+                        {/* <LatestComments /> */}
                       </div>
                     ))}
                 </div>
                 <div className="col-xxl-4 col-xl-4 col-lg-4">
                   <div className="blog__sidebar pl-70">
-                    <Search />
-                    <RecentPost />
+                    {/* <Search />
+                    <RecentPost /> */}
                     <Category />
                     <Tags />
-                    <SidebarBanner />
+                    {/* <SidebarBanner /> */}
                   </div>
                 </div>
               </div>

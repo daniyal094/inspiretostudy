@@ -42,7 +42,7 @@ function SignInMain() {
             );
             localStorage.setItem(
               "token",
-              JSON.stringify( data.response_data.token )
+              JSON.stringify(data.response_data.token)
             );
             if (data.response_data.user.role === "user") {
               router.push("/student_pannel");
@@ -135,7 +135,7 @@ function SignInMain() {
                       <h5>Password</h5>
                       <div className="sign__input">
                         <input
-                          type="text"
+                          type="password"
                           placeholder="Password"
                           value={formData.password}
                           name="password"

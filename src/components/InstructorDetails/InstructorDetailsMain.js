@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
 export default function InstructorDetailsMain() {
-    const [follow, setFollow] = useState('Follow')
+  const [follow, setFollow] = useState('Follow')
 
-    const followFunc =() =>{
-        setFollow('unfollow')
-    }
+  const followFunc = () => {
+    setFollow('unfollow')
+  }
   return (
     <div>
       <main>
@@ -37,7 +37,7 @@ export default function InstructorDetailsMain() {
               <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
                 <div className="teacher__details-thumb p-relative w-img pr-30">
                   <img
-                    src="assets/img/teacher/details/teacer-details-1.jpg"
+                    src="assets/img/teacher/teacger-1.jpg"
                     alt="img not found"
                   />
                   <div className="teacher__details-shape">
@@ -58,8 +58,8 @@ export default function InstructorDetailsMain() {
                 <div className="teacher__wrapper">
                   <div className="teacher__top d-md-flex align-items-end justify-content-between">
                     <div className="teacher__info">
-                      <h4>Hilary Ouse</h4>
-                      <span>Teaches Interior Markater</span>
+                      <h4>Izzah Khurram</h4>
+                      <span>Senior Coach</span>
                     </div>
                     <div className="teacher__rating">
                       <h5>Review:</h5>

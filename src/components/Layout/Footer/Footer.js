@@ -13,7 +13,7 @@ const Footer = () => {
                      <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
                         <div className="footer__widget mb-50">
                            <div className="footer__widget-body">
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos excepturi cumque animi magnam laudantium nihil.</p>
+                              <p>Being an optimist I want to spread the positivity around the globe. I am trying to reach out to people and be a source of inspiration through this channel. There are times when we need an external push to keep going.</p>
 
                               <div className="footer__social">
                                  <ul>

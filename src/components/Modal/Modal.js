@@ -24,7 +24,7 @@ export default function ModalMain(props) {
                 >
                   Student Name
                 </span>
-                <p>Abdul Moiz Khan</p>
+                <p>{props.studentName}</p>
               </li>{" "}
               <li>
                 <span
@@ -33,7 +33,7 @@ export default function ModalMain(props) {
                 >
                   Student Email
                 </span>
-                <p>xyz@gmail.com</p>
+                <p>{props.email}</p>
               </li>{" "}
               <li>
                 <span
@@ -42,7 +42,7 @@ export default function ModalMain(props) {
                 >
                   Patient Number
                 </span>
-                <p>+923XX XXXXXXX</p>
+                <p>{props.phoneNumber}</p>
               </li>
             </ul>
             <div>
@@ -71,7 +71,7 @@ export default function ModalMain(props) {
               >
                 Order Number
               </span>
-              <p>order-00583</p>
+              <p>{props.OrderNumber}</p>
             </li>
             <li>
               <span

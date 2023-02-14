@@ -10,7 +10,7 @@ class TeacherTwo extends Component {
         <div className="container">
           <div className="row">
             <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-              <Teacher teacherImg='assets/img/teacher/teacger-1.jpg' teacherName='Moiz Khan' position='Senior Coach' />
+              <Teacher teacherImg='assets/img/teacher/teacger-1.jpg' teacherName='Izzah Khurram' position='Senior Coach' />
             </div>
           </div>
         </div>

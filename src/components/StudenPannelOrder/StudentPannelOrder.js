@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "react-bootstrap";
 import BootstrapTable from "react-bootstrap-table-next";
 import paginationFactory from "react-bootstrap-table2-paginator";
@@ -9,8 +9,9 @@ import ModalMain from "../Modal/Modal";
 
 export default function StudentPannelOrder(props) {
   const { SearchBar } = Search;
-  const order = ["a", "d", "c"];
+  const order = ['a'];
   const [modalShow, setModalShow] = React.useState(false);
+
   const columns = [
     {
       dataField: "id",
@@ -23,21 +24,21 @@ export default function StudentPannelOrder(props) {
       dataField: "pkgType",
       text: "Pakage Type",
       formatter: (cell, row, index) => {
-        return <span>{}</span>;
+        return <span>{ }</span>;
       },
     },
     {
       dataField: "pkgId",
       text: "Order ID",
       formatter: (cell, row, index) => {
-        return <span>{}</span>;
+        return <span>{ }</span>;
       },
     },
     {
       dataField: "payment",
       text: "Payment Status",
       formatter: (cell, row, index) => {
-        return <span>{}</span>;
+        return <span>{ }</span>;
       },
     },
     {
@@ -54,16 +55,33 @@ export default function StudentPannelOrder(props) {
       },
     },
   ];
+
+  const token = JSON.parse(localStorage.getItem("token"));
+  const userId = JSON.parse(localStorage.getItem(localStorage.key('id')));
+
+  useEffect(() => {
+    fetch(`https://inspiretostudy.up.railway.app/api/v1/mypackage/${userId.id}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('My Package---->', data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <>
       <div className="p-3 py-1 w-100  mb-5 containerWithShadow">
         <ToolkitProvider keyField="id" data={order} columns={columns} search>
           {(props) => (
             <div className="container">
-              <SearchBar {...props.searchProps} className="mb-4"/>
-              
               <BootstrapTable keyField="id" data={order} columns={columns} />
-              <ModalMain show={modalShow} onHide={() => setModalShow(false)} />
             </div>
           )}
         </ToolkitProvider>

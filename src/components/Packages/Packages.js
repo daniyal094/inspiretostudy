@@ -23,13 +23,14 @@ const Plan = (props) => {
   const onApprovalData = () => {
     setLoading(true);
     const apiData = {
-      user_id: user?._id,
+      user_id: user?.id,
       package_id: selectedPackage?._id,
       package_name: selectedPackage.name,
       paymentCode: code,
       username: user?.username,
     };
-    console.log(code);
+    console.log(apiData);
+    console.log('user---->', user);
     if (code) {
       fetch("https://inspiretostudy.up.railway.app/api/v1/mypackage", {
         method: "POST",

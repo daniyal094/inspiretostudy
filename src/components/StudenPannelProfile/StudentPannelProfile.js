@@ -4,7 +4,7 @@ import Profile from "../Profile/Profile";
 export default function StudentPannelProfile() {
   return (
     <>
-     <Profile/>
+      <Profile />
     </>
   );
 }

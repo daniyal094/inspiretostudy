@@ -1,4 +1,4 @@
-import React, { useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Breadcrumb from "../Common/Breadcrumb";
 import StudentPannelApt from "../StudenPannelApt/StudentPannelApt";
 import StudentPannelOrder from "../StudenPannelOrder/StudentPannelOrder";
@@ -18,7 +18,7 @@ export default function StudentPannel() {
   return (
     <>
       <main>
-      <Breadcrumb pageTitle="Student Pannel" isImage={false}  />
+        <Breadcrumb pageTitle="Student Pannel" isImage={false} />
         <section className="blog__area pt-120 pb-120">
           <div className="d-flex justify-content-center">
             <button

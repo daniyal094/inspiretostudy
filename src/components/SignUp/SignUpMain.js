@@ -111,8 +111,8 @@ export default function SignUpMain() {
             </div>
             <form action="false">
               <div className="white-bg ">
-                <div className="row d-flex justify-content-between">
-                  <div className="sign__form col-xxl-6">
+                <div className="row">
+                  <div className="col-xxl-6">
                     <div className="sign__input-wrapper mb-25">
                       <h5>Name</h5>
                       <div className="sign__input">
@@ -125,7 +125,18 @@ export default function SignUpMain() {
                         <i className="fas fa-user"></i>
                       </div>
                     </div>
-
+                    <div className="sign__input-wrapper mb-25">
+                      <h5>Password</h5>
+                      <div className="sign__input">
+                        <input
+                          type="password"
+                          placeholder="Password"
+                          onChange={handleChangeFormData}
+                          name="password"
+                        />
+                        <i className="fas fa-lock"></i>
+                      </div>
+                    </div>
                     <div className="sign__input-wrapper mb-25">
                       <h5>Location</h5>
                       <div className="sign__input">
@@ -136,6 +147,75 @@ export default function SignUpMain() {
                           name="location"
                         />
                         <i className="fas fa-location"></i>
+                      </div>
+                    </div>
+                    <div className="sign__input-wrapper mb-25">
+                      <h5>Instagram</h5>
+                      <div className="sign__input">
+                        <input
+                          type="text"
+                          placeholder="Username Instagram"
+                          onChange={handleChangeFormData}
+                          name="Insta"
+                        />
+                        <i className="fas fa-lock"></i>
+                      </div>
+                    </div>
+                    <div className="sign__input-wrapper mb-25">
+                      <h5>Consistent</h5>
+                      <Select
+                        labelId="demo-simple-select-autowidth-label"
+                        id="demo-simple-select-autowidth"
+                        label="Education"
+                        onChange={handleChangeFormData}
+                        autoWidth
+                        value={formData.consistent}
+                        name="consistent"
+                        defaultValue={"Blank"}
+                      >
+                        <MenuItem value={"Blank"}>
+                          <em>Are you consistent with your education?</em>
+                        </MenuItem>
+                        <MenuItem value={true}>Yes</MenuItem>
+                        <MenuItem value={false}>No</MenuItem>
+                      </Select>
+                    </div>
+                  </div>
+                  <div className="col-xxl-6">
+                    <div className="sign__input-wrapper mb-25">
+                      <h5>Email</h5>
+                      <div className="sign__input">
+                        <input
+                          type="text"
+                          placeholder="Email"
+                          onChange={handleChangeFormData}
+                          name="email"
+                        />
+                        <i className="fas fa-user"></i>
+                      </div>
+                    </div>
+                    <div className="sign__input-wrapper mb-25">
+                      <h5>Retype Password</h5>
+                      <div className="sign__input">
+                        <input
+                          type="password"
+                          placeholder="Retype Password"
+                          onChange={handleChangeFormData}
+                          name="retypepassword"
+                        />
+                        <i className="fas fa-lock"></i>
+                      </div>
+                    </div>
+                    <div className="sign__input-wrapper mb-25">
+                      <h5>Phone Number</h5>
+                      <div className="sign__input">
+                        <input
+                          type="text"
+                          placeholder="Phone Number"
+                          onChange={handleChangeFormData}
+                          name="phone"
+                        />
+                        <i className="fas fa-phone"></i>
                       </div>
                     </div>
                     <div className="sign__input-wrapper mb-25">
@@ -157,111 +237,28 @@ export default function SignUpMain() {
                         <MenuItem value={"female"}>Femail</MenuItem>
                       </Select>
                     </div>
-                  <div >
                     <div className="sign__input-wrapper mb-25">
-                      <h5>Email</h5>
-                      <div className="sign__input">
-                        <input
-                          type="text"
-                          placeholder="Email"
-                          onChange={handleChangeFormData}
-                          name="email"
-                        />
-                        <i className="fas fa-user"></i>
-                      </div>
-                    </div>
-                    <div className="sign__input-wrapper mb-25">
-                      <h5>Password</h5>
-                      <div className="sign__input">
-                        <input
-                          type="text"
-                          placeholder="Password"
-                          onChange={handleChangeFormData}
-                          name="password"
-                        />
-                        <i className="fas fa-lock"></i>
-                      </div>
-                    </div>
-                    <div className="sign__input-wrapper mb-25">
-                      <h5>Retype Password</h5>
-                      <div className="sign__input">
-                        <input
-                          type="text"
-                          placeholder="Retype Password"
-                          onChange={handleChangeFormData}
-                          name="retypepassword"
-                        />
-                        <i className="fas fa-lock"></i>
-                      </div>
-                    </div>
-                    <div className="sign__input-wrapper mb-25">
-                      <h5>Instagram</h5>
-                      <div className="sign__input">
-                        <input
-                          type="text"
-                          placeholder="Username Instagram"
-                          onChange={handleChangeFormData}
-                          name="Insta"
-                        />
-                        <i className="fas fa-lock"></i>
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-                <div className="col-xxl-6">
-                  <div className="sign__input-wrapper mb-25">
-                    <h5>Phone Number</h5>
-                    <div className="sign__input">
-                      <input
-                        type="text"
-                        placeholder="Phone Number"
+                      <h5>Education</h5>
+                      <Select
+                        labelId="demo-simple-select-autowidth-label"
+                        id="demo-simple-select-autowidth"
+                        label="Education"
                         onChange={handleChangeFormData}
-                        name="phone"
-                      />
-                      <i className="fas fa-phone"></i>
+                        autoWidth
+                        value={formData.education}
+                        name="education"
+                        defaultValue={"Blank"}
+                      >
+                        <MenuItem value={"Blank"}>
+                          <em>Type of Education</em>
+                        </MenuItem>
+                        <MenuItem value={"Matric"}>Matric</MenuItem>
+                        <MenuItem value={"Intermediate"}>Intermediate</MenuItem>
+                        <MenuItem value={"Bachelor"}>Bachelor</MenuItem>
+                        <MenuItem value={"Master"}>Master</MenuItem>
+                      </Select>
                     </div>
                   </div>
-                  <div className="sign__input-wrapper mb-25">
-                    <h5>Education</h5>
-                    <Select
-                      labelId="demo-simple-select-autowidth-label"
-                      id="demo-simple-select-autowidth"
-                      label="Education"
-                      onChange={handleChangeFormData}
-                      autoWidth
-                      value={formData.education}
-                      name="education"
-                      defaultValue={"Blank"}
-                    >
-                      <MenuItem value={"Blank"}>
-                        <em>Type of Education</em>
-                      </MenuItem>
-                      <MenuItem value={"Matric"}>Matric</MenuItem>
-                      <MenuItem value={"Intermediate"}>Intermediate</MenuItem>
-                      <MenuItem value={"Bachelor"}>Bachelor</MenuItem>
-                      <MenuItem value={"Master"}>Master</MenuItem>
-                    </Select>
-                  </div>
-                  <div className="sign__input-wrapper mb-25">
-                    <h5>Consistent</h5>
-                    <Select
-                      labelId="demo-simple-select-autowidth-label"
-                      id="demo-simple-select-autowidth"
-                      label="Education"
-                      onChange={handleChangeFormData}
-                      autoWidth
-                      value={formData.consistent}
-                      name="consistent"
-                      defaultValue={"Blank"}
-                    >
-                      <MenuItem value={"Blank"}>
-                        <em>Are you consistent with your education?</em>
-                      </MenuItem>
-                      <MenuItem value={true}>Yes</MenuItem>
-                      <MenuItem value={false}>No</MenuItem>
-                    </Select>
-                  </div>
-                </div>
                 </div>
                 <div>
                   <div className="d-flex mb-20">
