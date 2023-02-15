@@ -1,37 +1,39 @@
 import React, { Component } from 'react';
 import Hero from './HeroSection';
-import Category from './CategorySection';
-import Banner from './BannerSection';
-import Event from './EventSection';
-import Cta from './CtaSection';
-import PriceTab from '../Elements/Tab/PriceTab';
-import CourseTab from '../Elements/Tab/CourseTab';
 import HeroSlider from '../Layout/Header/HeroSlider';
 import About from '../HomeTwo/AboutSection';
+import { animated, useSpring } from '@react-spring/web'
+import Slider from '../Slider';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+import "animate.css/animate.min.css";
+
 
 class HomeMain extends Component {
 
 	render() {
-
 		return (
 			<main>
+
 				<HeroSlider />
 				{/* hero-start */}
-				<div className='pt-100 pb-100 grey-bg-2'>
-					<Hero />
+				<div className='pt-150 pb-150 grey-bg-2'>
+					<AnimationOnScroll animateIn="animate__fadeInLeftBig">
+						<Hero />
+					</AnimationOnScroll>
 				</div>
 				{/* hero-end */}
 
 				{/* category-start */}
 				{/* <Category /> */}
 				{/* category-end */}
-
 				{/* banner-start */}
 				{/* <Banner /> */}
 				{/* banner-end */}
-				<div className='mt-30'>
-					<About />
-				</div>
+				<AnimationOnScroll animateIn="animate__fadeInRightBig">
+					<div className='mt-30'>
+						<About />
+					</div>
+				</AnimationOnScroll>
 				{/* course-start */}
 				{/* <CourseTab /> */}
 				{/* course-end */}

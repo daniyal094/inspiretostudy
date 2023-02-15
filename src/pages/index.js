@@ -2,25 +2,30 @@ import React from "react";
 import Header from "../components/Layout/Header/Header";
 import Footer from "../components/Layout/Footer/Footer";
 import HomeMain from "../components/Home/HomeMain";
+import { useRouter } from "next/router";
+import SplashScreen from "../components/splashScreen";
+import { useState } from "react";
 
-class Index extends React.Component {
-  static getInitialProps({ store }) { }
+export default function index() {
+  const [value, setValue] = useState(true)
+  const router = useRouter()
 
-  constructor(props) {
-    super(props);
-  }
+  setTimeout(() => {
+    setValue(false)
+  }, 5000);
 
-  render() {
+  console.log(value);
+  return (
+    <>
+      {value ? <SplashScreen /> :
 
-
-    return (
-      <React.Fragment>
-        <Header />
-        <HomeMain />
-        <Footer />
-      </React.Fragment>
-    );
-  }
+        <React.Fragment>
+          <Header />
+          <HomeMain />
+          <Footer />
+        </React.Fragment>
+      }
+    </>
+  )
 }
 
-export default Index;

@@ -35,8 +35,8 @@
 
 .card {
     border-radius: 5px;
-    -webkit-box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
-    box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
+    -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+    box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
     border: none;
     margin-bottom: 30px;
 }
@@ -54,8 +54,8 @@
 }
 
 .bg-c-lite-green {
-    background: rgb(50,140,158);
-    background: linear-gradient(90deg, rgba(50,140,158,1) 0%, rgba(46,99,181,1) 35%, rgba(20,154,181,1) 100%);
+    background: rgb(50, 140, 158);
+    background: linear-gradient(90deg, rgba(50, 140, 158, 1) 0%, rgba(46, 99, 181, 1) 35%, rgba(20, 154, 181, 1) 100%);
 }
 
 .user-profile {
@@ -75,17 +75,17 @@
 }
 
 
- 
+
 
 
 .card .card-block p {
     line-height: 25px;
 }
 
-@media only screen and (min-width: 1400px){
-p {
-    font-size: 14px;
-}
+@media only screen and (min-width: 1400px) {
+    p {
+        font-size: 14px;
+    }
 }
 
 .card-block {
@@ -153,4 +153,25 @@ p {
     margin: 0 10px 0 0;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+}
+
+
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+}
+
+#splash-screen video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
 }

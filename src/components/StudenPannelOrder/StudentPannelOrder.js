@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import BootstrapTable from "react-bootstrap-table-next";
 import paginationFactory from "react-bootstrap-table2-paginator";
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
+import { toast } from "react-toastify";
 import { orderData } from "../../sample-data/order";
 import ActionBtn from "../ActionBtn/ActionBtn";
 import ModalMain from "../Modal/Modal";
@@ -57,7 +58,11 @@ export default function StudentPannelOrder(props) {
   ];
 
   const token = JSON.parse(localStorage.getItem("token"));
-  const userId = JSON.parse(localStorage.getItem(localStorage.key('id')));
+  const userId = JSON.parse(localStorage.getItem('user'));
+  const [apiData, setApiData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+
 
   useEffect(() => {
     fetch(`https://inspiretostudy.up.railway.app/api/v1/mypackage/${userId.id}`, {
@@ -69,11 +74,11 @@ export default function StudentPannelOrder(props) {
     })
       .then((response) => response.json())
       .then((data) => {
+        setApiData(data?.response_data?.packages[0]);
         console.log('My Package---->', data);
+
       })
-      .catch((err) => {
-        console.log(err);
-      });
+      .catch((err) => toast.error(err.meassge));
   }, []);
   return (
     <>

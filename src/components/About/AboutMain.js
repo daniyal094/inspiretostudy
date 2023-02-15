@@ -7,6 +7,9 @@ import Counter from '../Elements/Counter/CounterStyleTwo';
 import Banner from '../Home/BannerSection';
 import dynamic from 'next/dynamic';
 import Heading from '../Heading/Heading';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+import "animate.css/animate.min.css";
+
 const BrandWithNoSSR = dynamic(() => import('../Elements/Brand/BrandSection'), {
 	ssr: false
 })
@@ -24,9 +27,12 @@ class AboutMain extends Component {
 				{/* breadcrumb-end */}
 
 				{/* about-start */}
-				<div className='mt-30'>
-					<About />
-				</div>
+				<AnimationOnScroll animateIn="animate__fadeInLeftBig">
+					<div className='mt-30'>
+						<About />
+
+					</div>
+				</AnimationOnScroll>
 				{/* about-end */}
 
 				{/* brand-start */}
@@ -38,11 +44,19 @@ class AboutMain extends Component {
 				{/* testimonial-end */}
 
 				{/* whychoose-start */}
-				<WhyChoose />
+				<AnimationOnScroll animateIn="animate__fadeInRightBig">
+
+					<WhyChoose />
+				</AnimationOnScroll>
+
 				{/* whychoose-end */}
 
 				{/* counter-start */}
-				<Counter />
+				<AnimationOnScroll animateIn="animate__fadeInLeftBig">
+
+					<Counter />
+				</AnimationOnScroll>
+
 				{/* counter-end */}
 
 				{/* banner-start */}
