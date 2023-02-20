@@ -150,6 +150,7 @@ export default function Packages() {
             />
             {data?.map((item, key) => (
               <>
+        
                 {item?.status && (
                   <div className="col-lg-4 col-md-6 col-12 pt-30">
                     <Plan
