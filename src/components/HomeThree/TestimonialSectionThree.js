@@ -13,14 +13,23 @@ class TestimonialThree extends Component {
   render() {
     return (
       <section
-        className="testimonial__area pt-145 pb-150"
+        className="testimonial__area pt-100 pb-100"
         style={{
           backgroundImage: `url(${"assets/img/testimonial/home-3/testimonial-bg-3.jpg"})`,
+          borderRadius: "25px",
+          
         }}
       >
         <div className="container">
-          <div className="row">
-            <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-10">
+          <div
+            className="row px-10"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <div className="col-10">
               <div className="testimonial__slider-3">
                 <h3 className="testimonial__title">
                   Student <br /> Community Feedback

@@ -62,16 +62,25 @@ export default function FaqData() {
             style={{ width: "800px", margin: "0 auto", padding: "30px" }}
           >
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-light my-4 p-3">
+              <div
+                key={index}
+                className=" my-4 p-3"
+                style={{
+                  border: "2px solid #fff",
+                  borderRadius: "10px",
+                  backgroundColor: "#0073A1",
+                }}
+              >
                 <h4
                   style={{
                     cursor: "pointer",
                     fontSize: "22px",
                     marginBottom: "30px",
                     fontWeight: "normal",
-                    background: "#e9e9e9",
+                    background: "#fff",
                     display: "flex",
                     justifyContent: "space-between",
+                    borderRadius: "10px",
                   }}
                   className="p-3"
                   onClick={() => toggleFAQ(index)}
@@ -80,7 +89,15 @@ export default function FaqData() {
                   <span
                     style={{
                       transform: faq.open ? "rotate(270deg)" : "rotate(90deg)",
-                      fontSize: "18px",
+                      fontSize: "18 px",
+                      // backgroundColor: "#0073A1",
+                      color: "black",
+                      // width: "40px",
+                      // height: "40px",
+                      // display: "flex",
+                      // justifyContent: "center",
+                      // alignItems: "center",
+                      // borderRadius: "50%",
                     }}
                   >
                     {" "}
@@ -92,9 +109,10 @@ export default function FaqData() {
                     style={{
                       marginBottom: "15px",
                       padding: "20px",
-                      backgroundColor: "#f2f2f2",
+                      backgroundColor: "#fff",
                       fontSize: "16px",
                       color: "black",
+                      borderRadius: "10px",
                     }}
                   >
                     Ans: {faq.answer}

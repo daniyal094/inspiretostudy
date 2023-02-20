@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Breadcrumb from '../Common/Breadcrumb';
 import Heading from '../Heading/Heading';
 import GetInTouch from './GetInTouchSection';
 import Knowledge from './KnowledgeSection';
+import "animate.css/animate.min.css";
+
 
 
 class ContactMain extends Component {
@@ -17,11 +20,17 @@ class ContactMain extends Component {
 				{/* breadcrumb-end */}
 
 				{/* Getintouch-start */}
-				<GetInTouch />
+				<AnimationOnScroll animateIn="animate__fadeInRightBig">
+					<GetInTouch />
+				</AnimationOnScroll>
 				{/* Getintouch-end */}
 
 				{/* Getintouch-start */}
-				<Knowledge />
+				<AnimationOnScroll animateIn="animate__fadeInLeftBig">
+
+					<Knowledge />
+				</AnimationOnScroll>
+
 				{/* Getintouch-end */}
 
 			</main>

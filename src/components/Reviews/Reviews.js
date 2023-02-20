@@ -4,6 +4,9 @@ import Breadcrumb from "../Common/Breadcrumb";
 import Heading from "../Heading/Heading";
 import TestimonialThree from "../HomeThree/TestimonialSectionThree";
 import WriteReviews from "./WriteReviews";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+import "animate.css/animate.min.css";
+
 
 export default function Reviews() {
   return (
@@ -16,7 +19,11 @@ export default function Reviews() {
         <div className="container">
           <div className="row">
             <div className="col-xxl-12 col-xl-8 col-lg-8">
-              <ReplyForm />
+              <AnimationOnScroll animateIn="animate__fadeInLeftBig">
+
+                <ReplyForm />
+              </AnimationOnScroll>
+
               <TestimonialThree />
             </div>
           </div>
