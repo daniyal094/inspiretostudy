@@ -9,7 +9,7 @@ import { useState } from "react";
 export default function index() {
   const [value, setValue] = useState(true)
   const router = useRouter()
-
+//time out to close splash
   setTimeout(() => {
     setValue(false)
   }, 5000);
