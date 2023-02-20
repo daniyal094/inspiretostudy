@@ -2,14 +2,14 @@ import React from 'react'
 import { useEffect } from 'react';
 
 export default function SplashScreen() {
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         const splashScreen = document.getElementById('splash-screen');
-    //         if (splashScreen) {
-    //             splashScreen.remove();
-    //         }
-    //     }, 5000);
-    // }, []);
+    useEffect(() => {
+        setTimeout(() => {
+            const splashScreen = document.getElementById('splash-screen');
+            if (splashScreen) {
+                splashScreen.remove();
+            }
+        }, 5000);
+    }, []);
     return (
         <>
             <div id="splash-screen">
